@@ -1,12 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website with Pictures</title>
+    <style>
+        /* Basic CSS for styling and layout */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap; /* Allows images to wrap to the next line */
+            gap: 1rem; /* Space between images */
+            justify-content: center; /* Centers the images in the container */
+        }
+        .image-item {
+            /* Ensures images are responsive and don't get larger than their container */
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 5px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .image-item img {
+            max-width: 100%; /* Image scales down if necessary */
+            height: auto; /* Maintains aspect ratio */
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Hello, World!</h1>
-    <p>This is my first HTML page.</p>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>A simple site featuring some images.</p>
+    </header>
+
+    <div class="container">
+        <h2>Our Amazing Pictures</h2>
+        <p>Here you can see a collection of images. We use CSS flexbox for a responsive layout.</p>
+
+        <div class="image-gallery">
+            <!-- Image 1 -->
+            <div class="image-item">
+                <img src="path/to/your/image1.jpg" alt="Description of image 1">
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="image-item">
+                <img src="path/to/your/image2.jpg" alt="Description of image 2">
+            </div>
+            
+            <!-- Image 3 -->
+            <div class="image-item">
+                <img src="path/to/your/image3.jpg" alt="Description of image 3">
+            </div>
+
+            <!-- Add more images as needed by copying the .image-item div -->
+            <div class="image-item">
+                <img src="path/to/your/image4.jpg" alt="Description of image 4">
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
